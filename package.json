@@ -2,6 +2,9 @@
   "name": "youtube-downloader",
   "version": "0.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "8.7.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,7 +15,9 @@
     "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server ",
     "serve:ssr": "node dist/server.js",
     "build:client-and-server-bundles": "ng build --prod && ng build --prod --app 1 --output-hashing=false",
-    "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
+    "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
+
+     "heroku-prebuild": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {

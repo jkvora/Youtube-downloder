@@ -1,0 +1,7 @@
+{
+  "name": "Youtube Video Downloader",
+  "description": "A Simple Youtube Video Downloader using ytdl",
+  "repository":"https://github.com/jkvora/Youtube-downloder.git",
+  "logo": "https://mlab.com/company/brand/resources/mLab-logo-onlight.png",
+  "keywords": ["node", "express","Angular", "Youtube","YTDL"]
+}
