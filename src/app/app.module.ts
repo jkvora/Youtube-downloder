@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     FormsModule,
     MatInputModule,
-    BrowserModule
+    BrowserModule.withServerTransition({appId:'youtube-app'})
     
   ],
   providers: [],
