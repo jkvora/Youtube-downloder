@@ -3,7 +3,7 @@
     <div class="navbuttons">
 
       <div class="leftnavs">
-        <button mat-button >Home </button>
+        <button mat-button>Home </button>
       </div>
 
       <div class="rightnavs">
@@ -14,3 +14,10 @@
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
+
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Search " value="" [(ngModel)]="searchText">
+  </mat-form-field>
+
+  <button mat-button (click)="SearchYoutubeVideos()">Search</button>

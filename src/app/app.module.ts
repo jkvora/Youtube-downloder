@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import {MatButtonModule, MatCheckboxModule,MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule,MatToolbarModule, MatInputModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,6 +18,8 @@ import { AppComponent } from './app.component';
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
+    FormsModule,
+    MatInputModule,
     BrowserModule
     
   ],

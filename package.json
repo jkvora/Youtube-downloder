@@ -23,8 +23,13 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@types/gapi.client": "^1.0.0",
+    "@types/gapi.client.youtube": "^3.0.0",
     "core-js": "^2.4.1",
+    "googleapis": "^28.1.0",
+    "i": "^0.3.6",
     "rxjs": "^5.5.6",
+    "typings": "^2.1.1",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
