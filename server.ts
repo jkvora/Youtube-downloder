@@ -8,6 +8,7 @@ import { enableProdMode } from '@angular/core';
 import * as express from 'express';
 import { join } from 'path';
 import { readFileSync } from 'fs';
+import * as ytdl from 'ytdl-core';
 
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
@@ -45,6 +46,34 @@ app.set('views', join(DIST_FOLDER, 'browser'));
 
 // Server static files from /browser
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
+
+
+app.post('/video', function (req, res) {
+  console.log("In youtube Routes:POST");
+  console.log(req);
+})
+
+
+app.get('/video', function (req, res) {
+  console.log("In youtube Routes:GET");
+
+
+  var strUrl = req.query.url;
+
+  var ytstream = ytdl(strUrl);
+  //var tempFile = fs.createWriteStream('/video');
+
+  res.setHeader("Content-Type", "application/octet-stream");
+  res.writeHead(200);
+
+  ytstream.on('data', function (data) {
+    res.write(data);
+  })
+
+  ytstream.on('end', function (data) {
+    res.send();
+  })
+})
 
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
