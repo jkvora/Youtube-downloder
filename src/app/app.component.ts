@@ -10,8 +10,6 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'app';
   public searchText: string = '';
-  public urlText:string='';
-
 
   constructor() {
 
@@ -32,26 +30,23 @@ export class AppComponent implements OnInit {
       console.log(str);
     });
   }
-  downloadVideo(){
-     window.location.href="/video?url="+this.urlText;
-  }
+
 
   googleApiClientReady() {
-   
+
     gapi.load("client", () => {
       console.log("client loaded");
-      gapi.client.load('youtube', 'v3', () => { 
+      gapi.client.load('youtube', 'v3', () => {
         console.log("youtube loaded");
         this.setApiKey();
       });
     });
 
-    
+
   }
   setApiKey() {
     gapi.client.setApiKey('AIzaSyCtWvvzfxZNluNJxswwSKHSdta6onQSPGg');
-     console.log("Youtube Api loaded");
+    console.log("Youtube Api loaded");
   }
-
 
 }

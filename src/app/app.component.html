@@ -1,23 +1,2 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <div class="navbuttons">
-
-      <div class="leftnavs">
-        <button mat-button>Home </button>
-      </div>
-
-      <div class="rightnavs">
-        <button mat-button>About</button>
-        <button mat-button>Contact</button>
-      </div>
-
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
-
-
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Paste Youtube Video URL " value="" [(ngModel)]="urlText">
-  </mat-form-field>
-
-  <button mat-button (click)="downloadVideo()">Download</button>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>

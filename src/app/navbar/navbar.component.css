@@ -1,0 +1,9 @@
+.rightnavs{
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    padding: 0px 25px;
+}
+.leftnavs{
+    display: inline-block;
+}
